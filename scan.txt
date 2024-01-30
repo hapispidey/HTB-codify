@@ -1,0 +1,18 @@
+# Nmap 7.93 scan initiated Sat Jan  6 12:51:41 2024 as: nmap -sC -sV -o scan.txt codify.htb
+Nmap scan report for codify.htb (10.10.11.239)
+Host is up (0.29s latency).
+Not shown: 997 closed tcp ports (conn-refused)
+PORT     STATE SERVICE VERSION
+22/tcp   open  ssh     OpenSSH 8.9p1 Ubuntu 3ubuntu0.4 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   256 96071cc6773e07a0cc6f2419744d570b (ECDSA)
+|_  256 0ba4c0cfe23b95aef6f5df7d0c88d6ce (ED25519)
+80/tcp   open  http    Apache httpd 2.4.52
+|_http-title: Codify
+|_http-server-header: Apache/2.4.52 (Ubuntu)
+3000/tcp open  http    Node.js Express framework
+|_http-title: Codify
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Jan  6 12:52:38 2024 -- 1 IP address (1 host up) scanned in 56.44 seconds

